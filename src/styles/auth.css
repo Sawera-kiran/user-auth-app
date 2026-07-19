@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* CONTAINER */
+.container {
+  min-height: 100vh; /* better than fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* prevents edge touching on mobile */
+}
+
+/* CARD */
+.card {
+  width: 350px;
+  max-width: 100%; /* makes it shrink on small screens */
+  padding: 30px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* TITLE */
+h2 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* INPUT WRAPPER */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* INPUT */
+.input {
+  width: 80%;
+  padding: 12px 45px 12px 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  caret-color: #000000;
+  background-color: white !important;  
+  color: black !important;             
+  outline: none;
+}
+
+.input:focus {
+  background-color: white !important;
+  color: black !important;
+  border-color: #000000;
+}
+
+.input:active {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* AUTOFILL FIX */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: black !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* PLACEHOLDER */
+.input::placeholder {
+  color: #888;
+  opacity: 1;
+}
+
+/* BUTTON (UNCHANGED) */
+.btn {
+  width: 40%;
+  padding: 9px;
+  margin-top: 20px;
+  border: none;
+  background: #0d380f;
+  color: white;
+  cursor: pointer;
+  font-size: 19px;
+}
+
+.btn:hover {
+  background: #173d28;
+}
+
+/* TEXT */
+p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #000000;
+}
+
+p a {
+  color: #0d380f;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+p a:hover {
+  color: #173d28;
+}
+
+/* EYE ICON */
+.toggle-eye {
+  position: absolute;
+  right: 34px;
+  top: 50%;
+  transform: translateY(-40%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+}
+
+.toggle-eye:hover {
+  color: #000;
+}
+
+/* 🔥 RESPONSIVE FIXES */
+
+/* TABLET */
+@media (max-width: 768px) {
+  .card {
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  /* ONLY slight adjustment to prevent overflow */
+  .input {
+    width: 80%;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}
