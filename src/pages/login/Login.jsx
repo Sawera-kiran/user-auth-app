@@ -18,7 +18,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/api/login", {
+      const res = await fetch("https://user-auth-backend-production-0b6a.up.railway.app/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
