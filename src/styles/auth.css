@@ -1,15 +1,21 @@
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
+  padding: 0;
+  min-height: 100%;
   font-family: Arial, sans-serif;
 }
 
 /* CONTAINER */
 .container {
-  min-height: 100vh; /* better than fixed height */
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px; /* prevents edge touching on mobile */
+  background-image: url("/bg.jpg");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 /* CARD */
@@ -18,8 +24,8 @@ body {
   max-width: 100%; /* makes it shrink on small screens */
   padding: 30px;
   border-radius: 12px;
-  background: white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  background: #ffffff14;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
@@ -41,11 +47,10 @@ h2 {
   padding: 12px 45px 12px 12px;
   margin: 10px 0;
   font-size: 16px;
-  border-radius: 6px;
   border: 1px solid #ccc;
-  caret-color: #000000;
-  background-color: white !important;  
-  color: black !important;             
+  caret-color: #636363;
+  background-color: white !important;
+  color: black !important;
   outline: none;
 }
 
